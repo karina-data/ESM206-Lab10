@@ -1,0 +1,91 @@
+---
+title: "ESM206 Lab 10"
+author: "Karina Johnston"
+date: "11/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Attach packages
+library(tidyverse)
+library(janitor)
+
+# Attach new packages
+library(usethis)
+library(beepr)
+library(praise)
+library(cowsay)
+library(paletteer)
+library(sf)
+```
+
+
+## Use `beepr::beep()`
+
+Good for sounds for when code is done running - good if you have a long complicated code that you need to know when its done running.
+
+```{r}
+beep(8)
+```
+
+## For loop, using `beep()` when done
+
+Write a for loop
+
+```{r, eval = FALSE}
+# 99 bottles of beer on the wall...
+
+for(i in rev(seq(1:999))) {
+  print(paste(i, "bottles of beer on the wall..."))
+}
+
+beep(4)
+
+```
+
+## Using `praise()`
+
+Nice messages only!
+can specify template for grammatical look of it
+
+```{r}
+# specify template pieces
+
+praise("${EXCLAMATION}!!! This code works ${adverb_manner}!")
+
+```
+
+## Using the cowsay package
+
+only has a single function `cowsay::say()`
+
+```{r}
+say("I love Karina!", by = "shark")
+```
+
+## Usethis for everything
+
+Allison's favorite r package
+can make your life easier!
+
+`usethis::edit_r_profile()`
+
+```{r}
+# updating R profile - settings associated with your default R sessions
+
+```
+
+R Project first, then create a github
+
+`usethis:use_git()`
+then `usethis::use_github()`
+
+do it in your console
+
+```{r}
+
+```
+
+
